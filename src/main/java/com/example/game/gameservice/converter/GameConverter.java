@@ -12,6 +12,7 @@ public class GameConverter {
     public static List<SimpleViewGame> toSimpleViewGame(List<Game> games) {
         return games.stream().map(game -> SimpleViewGame.builder()
                 .game(game.getName())
+                .id(game.getId())
                 .studio(game.getStudio().getName())
                 .genres(game.getGenres().stream().map(Genre::getName).toList())
                 .build()).toList();

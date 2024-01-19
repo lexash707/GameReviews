@@ -10,6 +10,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 public class SimpleViewGame {
+    private Long id;
     private String game;
     private String studio;
     private List<String> genres;
